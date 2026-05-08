@@ -29,7 +29,15 @@ export class SupabaseService {
     });
   }
 
-  logout() {
-    return this.supabase.auth.signOut();
+  async logout() {
+    await this.supabase.auth.signOut();
+  }
+
+  getSession(){
+    return this.supabase.auth.getSession();
+  }
+
+  getUser() {
+    return this.supabase.auth.getUser();
   }
 }

@@ -1,0 +1,81 @@
+.gallery-background {
+
+  --background: #f4f5f8;
+
+}
+
+
+.gallery-title {
+
+  text-align: center;
+
+  margin-top: 20px;
+
+}
+
+
+.gallery-title h2 {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  margin-bottom: 5px;
+
+}
+
+
+.gallery-title p {
+
+  color: gray;
+
+}
+
+
+.photo-card {
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+
+}
+
+
+.photo-card:hover {
+
+  transform: scale(1.03);
+
+}
+
+
+.photo-image {
+
+  width: 100%;
+
+  height: 200px;
+
+  object-fit: cover;
+
+}
+
+
+.nav-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  margin: 20px;
+
+}
+
+
+.nav-button {
+
+  --border-radius: 14px;
+
+}

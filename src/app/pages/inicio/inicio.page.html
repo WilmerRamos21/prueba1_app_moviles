@@ -1,0 +1,88 @@
+<ion-card class="welcome-card">
+
+  <ion-card-header>
+
+    <ion-card-title>
+      Bienvenido a Mi Aplicación
+    </ion-card-title>
+
+    <ion-card-subtitle>
+      Proyecto desarrollado con Ionic + Angular + Supabase
+    </ion-card-subtitle>
+
+  </ion-card-header>
+
+  <ion-card-content>
+
+    Esta aplicación integra diferentes funcionalidades modernas
+    como autenticación de usuarios, gestión de perfil, galería de fotos
+    utilizando la cámara del dispositivo y consumo de APIs externas
+    para la búsqueda de personajes de anime y Star Wars.
+
+    <br><br>
+
+    El objetivo del proyecto es aplicar conocimientos de desarrollo
+    móvil híbrido, navegación entre páginas, consumo de servicios web,
+    almacenamiento local y diseño de interfaces interactivas.
+
+  </ion-card-content>
+
+</ion-card>
+
+<div class="nav-container">
+      <ion-button
+      class="nav-button"
+      routerLink="/photo"
+    >
+
+      <ion-icon
+        slot="start"
+        name="images"
+      ></ion-icon>
+
+      Galería de fotos
+
+    </ion-button>
+
+          <ion-button
+      class="nav-button"
+      routerLink="/character-list"
+    >
+
+      <ion-icon
+        slot="start"
+        name="search"
+      ></ion-icon>
+
+      API Anime
+
+    </ion-button>
+
+<ion-button
+      class="nav-button"
+      routerLink="/profile"
+    >
+
+      <ion-icon
+        slot="start"
+        name="person"
+      ></ion-icon>
+
+      Perfil
+
+    </ion-button>
+
+        <ion-button
+  color="danger"
+  (click)="logout()"
+>
+
+  <ion-icon
+    slot="start"
+    name="log-out-outline"
+  ></ion-icon>
+
+  Cerrar Sesión
+
+</ion-button>
+</div>

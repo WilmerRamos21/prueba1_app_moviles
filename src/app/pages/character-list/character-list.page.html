@@ -1,0 +1,126 @@
+<ion-header>
+
+  <ion-toolbar color="dark">
+
+    <ion-title>
+      Anime Characters
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <!-- SEARCH -->
+
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+    placeholder="Buscar personaje"
+    (ionInput)="searchCharacter()"
+  >
+  </ion-searchbar>
+
+
+  <!-- RESULTADOS -->
+
+  <ion-card
+    *ngFor="let character of characters"
+  >
+
+    <!-- IMAGEN -->
+
+    <img
+      [src]="character.images.jpg.image_url"
+    />
+
+
+    <ion-card-header>
+
+      <ion-card-title>
+
+        {{ character.name }}
+
+      </ion-card-title>
+
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <p>
+
+        ⭐ Favoritos:
+        {{ character.favorites }}
+
+      </p>
+
+      <p>
+
+        {{ character.about }}
+
+      </p>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
+
+<div class="nav-container">
+      <ion-button
+      class="nav-button"
+      routerLink="/home"
+    >
+
+      <ion-icon
+        slot="start"
+        name="home"
+      ></ion-icon>
+
+      Home
+
+    </ion-button>
+
+          <ion-button
+      class="nav-button"
+      routerLink="/character-list"
+    >
+
+      <ion-icon
+        slot="start"
+        name="search"
+      ></ion-icon>
+
+      API Anime
+
+    </ion-button>
+
+<ion-button
+      class="nav-button"
+      routerLink="/profile"
+    >
+
+      <ion-icon
+        slot="start"
+        name="person"
+      ></ion-icon>
+
+      Perfil
+
+    </ion-button>
+
+        <ion-button
+  color="danger"
+  (click)="logout()"
+>
+
+  <ion-icon
+    slot="start"
+    name="log-out-outline"
+  ></ion-icon>
+
+  Cerrar Sesión
+
+</ion-button>
+</div>

@@ -1,0 +1,139 @@
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="dark">
+
+    <ion-title>
+      Galería
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content
+  [fullscreen]="true"
+  class="gallery-background"
+>
+
+  <!-- TÍTULO -->
+
+  <div class="gallery-title">
+
+    <h2>
+      Mis Fotos
+    </h2>
+
+    <p>
+      Capturas almacenadas en la aplicación
+    </p>
+
+  </div>
+
+
+  <!-- GRID DE FOTOS -->
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col
+        size="6"
+        size-md="4"
+        size-lg="3"
+        *ngFor="let photo of photoService.photos"
+      >
+
+        <ion-card class="photo-card">
+
+          <ion-img
+            [src]="photo.webviewPath"
+            class="photo-image"
+          >
+          </ion-img>
+
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+
+  <!-- BOTÓN CÁMARA -->
+
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+
+    <ion-fab-button (click)="addPhotoGallery()">
+
+      <ion-icon name="camera"></ion-icon>
+
+    </ion-fab-button>
+
+  </ion-fab>
+
+
+  <!-- NAVEGACIÓN -->
+
+  
+
+</ion-content>
+<div class="nav-container">
+      <ion-button
+      class="nav-button"
+      routerLink="/home"
+    >
+
+      <ion-icon
+        slot="start"
+        name="home"
+      ></ion-icon>
+
+      Home
+
+    </ion-button>
+
+          <ion-button
+      class="nav-button"
+      routerLink="/character-list"
+    >
+
+      <ion-icon
+        slot="start"
+        name="search"
+      ></ion-icon>
+
+      API Anime
+
+    </ion-button>
+
+<ion-button
+      class="nav-button"
+      routerLink="/profile"
+    >
+
+      <ion-icon
+        slot="start"
+        name="person"
+      ></ion-icon>
+
+      Perfil
+
+    </ion-button>
+
+        <ion-button
+  color="danger"
+  (click)="logout()"
+>
+
+  <ion-icon
+    slot="start"
+    name="log-out-outline"
+  ></ion-icon>
+
+  Cerrar Sesión
+
+</ion-button>
+</div>
